@@ -1,0 +1,19 @@
+@media (max-width: 768px) {
+  /* Stack logo + nav items vertically */
+  nav > div.center {
+    flex-direction: column;       /* stack logo and buttons */
+    align-items: center;          /* center everything horizontally */
+  }
+
+  /* Stack the buttons vertically */
+  nav > div.center > div.flex.items-center {
+    flex-direction: row;       /* vertical stack */
+    margin-top: 0.5rem;           /* space below logo */
+  }
+
+  /* Reduce spacing between buttons */
+  nav > div.center > div.flex.items-center > button {
+    margin: 0.25rem 0;            /* vertical spacing */
+    font-size: 0.9rem;            /* slightly smaller text */
+  }
+}
