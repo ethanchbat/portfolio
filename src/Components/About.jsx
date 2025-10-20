@@ -14,23 +14,19 @@ class About extends Component {
           
           <div className="measure-wide">
             <p className="f4 mid-gray lh-copy mb4">
-              I’m a full-stack web developer passionate about creating digital experiences that are both functional and engaging. 
-              I started coding at 11 and, 
-              after some early experimentation, 
-              returned to web development at 16 with professional training and a drive to build personal projects from scratch. 
-              I’m most efficient on the front end but comfortable handling back-end and database work as well. 
-              What excites me most is solving complex problems and watching an idea come to life on the screen. 
-              I’m also eager to expand my expertise into cybersecurity and, eventually, AI/ML, 
-              continuously exploring new technologies and challenges.
+              I’m a full-stack web developer who loves building digital experiences that are both functional and engaging. 
+              I started coding at 11, took a break, 
+              and got back into it at 16 with professional training and a passion for creating projects from scratch. 
+              I’m strongest on the front end but also comfortable working with back-end systems and databases. 
+              What drives me most is solving problems and turning ideas into real, working products. 
+              I’m also interested in expanding into cybersecurity and, later on, AI and machine learning, 
+              always looking to learn new technologies and tackle new challenges.
             </p>
             <p className="f4 mid-gray lh-copy mb4">
-              Outside of development, 
-              I’m a guitarist and pianist exploring music production and composition. 
-              I’m focused on improving my skills and pursuing music professionally, 
-              blending creativity with technical precision. 
-              My work in coding and music reflects a curious, 
-              detail-oriented, and ambitious mindset—I’m obsessed with learning, 
-              experimenting, and creating in everything I do.
+              Outside of development, I’m a guitarist and pianist exploring music production and composition. 
+              I’m focused on sharpening my skills and pursuing music professionally, 
+              combining creativity with technical precision. Whether I’m coding or making music, 
+              I’m obsessed with learning, experimenting, and creating in everything I do.
             </p>
           </div>
 
