@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ethanchbat.com/sitemap.xml
