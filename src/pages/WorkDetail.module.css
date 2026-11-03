@@ -1,0 +1,108 @@
+.page {
+  padding: var(--space-8) var(--space-4);
+}
+
+.inner {
+  max-width: var(--content-narrow);
+  margin: 0 auto;
+}
+
+.back {
+  font-size: var(--text-small);
+  color: var(--color-ink-faint);
+}
+
+.back:hover {
+  color: var(--color-forest);
+}
+
+.top {
+  margin-top: var(--space-5);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.name {
+  font-size: var(--text-display);
+}
+
+.image {
+  width: 100%;
+  margin-top: var(--space-5);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.status {
+  flex-shrink: 0;
+  margin-top: var(--space-2);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--text-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--color-forest);
+  border: 1px solid var(--color-forest-soft);
+  background: var(--color-forest-soft);
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius-full);
+}
+
+.tagline {
+  margin-top: var(--space-4);
+  font-size: var(--text-lead);
+  color: var(--color-ink-soft);
+}
+
+.meta {
+  margin-top: var(--space-5);
+  padding: var(--space-4) 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  gap: var(--space-6);
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.metaLabel {
+  font-size: var(--text-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-eyebrow);
+  color: var(--color-ink-faint);
+}
+
+.metaValue {
+  font-size: var(--text-small);
+  font-weight: 560;
+}
+
+.summary {
+  margin-top: var(--space-6);
+  font-size: var(--text-h3);
+  font-family: var(--font-display);
+  font-weight: 460;
+  line-height: var(--leading-snug);
+}
+
+.note {
+  margin-top: var(--space-4);
+  color: var(--color-ink-soft);
+  font-style: italic;
+  line-height: var(--leading-copy);
+}
+
+.actions {
+  margin-top: var(--space-6);
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}

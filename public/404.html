@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ethan Chbat</title>
+    <script>
+      // GitHub Pages has no server-side rewrites. Stash the path the visitor
+      // actually wanted and redirect to the real SPA entry point, which
+      // restores it before the router reads location (see src/main.jsx).
+      sessionStorage.setItem(
+        'spa-redirect',
+        location.pathname + location.search + location.hash
+      )
+      location.replace('/')
+    </script>
+  </head>
+  <body></body>
+</html>

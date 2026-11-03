@@ -1,0 +1,30 @@
+.page {
+  padding: var(--space-8) var(--space-4);
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.inner {
+  max-width: var(--content-narrow);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.eyebrow {
+  font-size: var(--text-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-eyebrow);
+  color: var(--color-gold);
+  margin-bottom: var(--space-4);
+}
+
+.heading {
+  font-size: var(--text-h1);
+}
+
+.sub {
+  margin: var(--space-4) auto var(--space-6);
+  max-width: 26rem;
+  color: var(--color-ink-soft);
+}

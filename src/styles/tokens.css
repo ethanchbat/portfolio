@@ -1,0 +1,74 @@
+:root {
+  /* ---- Color: warm ivory ground, forest accent, restrained gold ---- */
+  --color-bg: #f7f3ea;
+  --color-bg-alt: #efe8d8;
+  --color-surface: #fffdf8;
+  --color-ink: #1b1b16;
+  --color-ink-soft: #55514a;
+  --color-ink-faint: #8c877c;
+
+  --color-forest: #1f3d30;
+  --color-forest-deep: #142922;
+  --color-forest-soft: #e4eadf;
+
+  --color-gold: #a6873c;
+  --color-gold-soft: #efe4c8;
+
+  --color-border: rgba(27, 27, 22, 0.12);
+  --color-border-strong: rgba(27, 27, 22, 0.22);
+
+  --color-focus-ring: #1f3d30;
+
+  /* ---- Radii: one consistent scale, everywhere ---- */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-full: 999px;
+
+  /* ---- Spacing: base rhythm ---- */
+  --space-1: 0.5rem;
+  --space-2: 0.75rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2.25rem;
+  --space-6: 3.5rem;
+  --space-7: clamp(4rem, 3.4rem + 3vw, 6.5rem);
+  --space-8: clamp(5.5rem, 4.5rem + 5vw, 9rem);
+
+  /* ---- Type scale: fluid, editorial ---- */
+  --text-display: clamp(2.25rem, 1.9rem + 2vw, 3.75rem);
+  --text-h1: clamp(1.75rem, 1.5rem + 1.4vw, 2.75rem);
+  --text-h2: clamp(1.375rem, 1.25rem + 0.8vw, 1.875rem);
+  --text-h3: clamp(1.125rem, 1.05rem + 0.4vw, 1.375rem);
+  --text-lead: clamp(1.0625rem, 1rem + 0.2vw, 1.1875rem);
+  --text-body: 1rem;
+  --text-small: 0.875rem;
+  --text-eyebrow: 0.75rem;
+
+  --leading-tight: 1.08;
+  --leading-snug: 1.3;
+  --leading-copy: 1.65;
+
+  --tracking-eyebrow: 0.14em;
+  --tracking-wide: 0.02em;
+
+  /* ---- Motion ---- */
+  --ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 0.2s;
+  --duration-base: 0.45s;
+  --duration-slow: 0.9s;
+
+  /* ---- Layout ---- */
+  --content-max: 72rem;
+  --content-narrow: 42rem;
+  --nav-height: 76px;
+
+  --shadow-soft: 0 1px 2px rgba(27, 27, 22, 0.04), 0 12px 32px -16px rgba(27, 27, 22, 0.14);
+  --shadow-lift: 0 2px 4px rgba(27, 27, 22, 0.05), 0 24px 48px -20px rgba(27, 27, 22, 0.22);
+}
+
+@media (prefers-color-scheme: dark) {
+  /* The brand is deliberately a single warm-light system (ivory/forest/charcoal) —
+     it does not reinterpret into a dark theme. */
+}

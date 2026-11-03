@@ -1,0 +1,140 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  background: rgba(247, 243, 234, 0.82);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.inner {
+  width: 100%;
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mark {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 560;
+  letter-spacing: -0.01em;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.link {
+  position: relative;
+  font-size: var(--text-small);
+  font-weight: 560;
+  color: var(--color-ink-soft);
+  letter-spacing: var(--tracking-wide);
+  padding: var(--space-2) 0;
+  transition: color var(--duration-fast) var(--ease-editorial);
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  background: var(--color-forest);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--duration-base) var(--ease-editorial);
+}
+
+.link:hover {
+  color: var(--color-ink);
+}
+
+.link:hover::after {
+  transform: scaleX(1);
+}
+
+.linkActive {
+  color: var(--color-forest);
+}
+
+.linkActive::after {
+  transform: scaleX(1);
+}
+
+.toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.toggleBar {
+  height: 1.5px;
+  width: 100%;
+  background: var(--color-ink);
+  transition: transform var(--duration-fast) var(--ease-editorial),
+    opacity var(--duration-fast) var(--ease-editorial);
+}
+
+.toggleOpen .toggleBar:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+.toggleOpen .toggleBar:nth-child(2) {
+  opacity: 0;
+}
+
+.toggleOpen .toggleBar:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+.mobilePanel {
+  position: fixed;
+  top: var(--nav-height);
+  left: 0;
+  right: 0;
+  height: calc(100dvh - var(--nav-height));
+  z-index: 99;
+  background: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-6) var(--space-4);
+  gap: var(--space-4);
+  overflow-y: auto;
+}
+
+.mobileLink {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  color: var(--color-ink);
+}
+
+.mobileLinkActive {
+  color: var(--color-forest);
+}
+
+@media (max-width: 720px) {
+  .links {
+    display: none;
+  }
+
+  .toggle {
+    display: flex;
+  }
+}

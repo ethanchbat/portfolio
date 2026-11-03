@@ -1,0 +1,80 @@
+.footer {
+  background: var(--color-forest-deep);
+  color: var(--color-bg);
+}
+
+.inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-7) var(--space-4) var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-6);
+}
+
+.mark {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  color: var(--color-bg);
+  max-width: 24rem;
+}
+
+.markLine {
+  margin-top: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: var(--text-small);
+  color: rgba(247, 243, 234, 0.6);
+}
+
+.columns {
+  display: flex;
+  gap: var(--space-7);
+}
+
+.colTitle {
+  font-size: var(--text-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-eyebrow);
+  color: var(--color-gold);
+  margin-bottom: var(--space-3);
+}
+
+.colLinks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.colLinks a {
+  font-size: var(--text-small);
+  color: rgba(247, 243, 234, 0.82);
+  transition: color var(--duration-fast) var(--ease-editorial);
+}
+
+.colLinks a:hover {
+  color: var(--color-bg);
+}
+
+.bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding-top: var(--space-5);
+  border-top: 1px solid rgba(247, 243, 234, 0.14);
+  font-size: var(--text-small);
+  color: rgba(247, 243, 234, 0.55);
+}
+
+@media (max-width: 600px) {
+  .columns {
+    gap: var(--space-5);
+  }
+}

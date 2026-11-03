@@ -1,0 +1,9 @@
+/* Self-hosted variable fonts — no third-party runtime requests. */
+@import '@fontsource-variable/fraunces/standard.css';
+@import '@fontsource-variable/fraunces/standard-italic.css';
+@import '@fontsource-variable/inter/standard.css';
+
+:root {
+  --font-display: 'Fraunces Variable', 'Iowan Old Style', ui-serif, Georgia, serif;
+  --font-sans: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}

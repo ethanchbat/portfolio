@@ -1,0 +1,61 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: var(--text-small);
+  font-weight: 560;
+  letter-spacing: var(--tracking-wide);
+  padding: 0.95rem 1.6rem;
+  border-radius: var(--radius-full);
+  border: 1px solid transparent;
+  transition: transform var(--duration-fast) var(--ease-editorial),
+    background-color var(--duration-fast) var(--ease-editorial),
+    border-color var(--duration-fast) var(--ease-editorial),
+    color var(--duration-fast) var(--ease-editorial);
+  white-space: nowrap;
+}
+
+.button:active {
+  transform: scale(0.97);
+}
+
+.primary {
+  background: var(--color-forest);
+  color: var(--color-bg);
+  border-color: var(--color-forest);
+}
+
+.primary:hover {
+  background: var(--color-forest-deep);
+  border-color: var(--color-forest-deep);
+}
+
+.secondary {
+  background: transparent;
+  color: var(--color-ink);
+  border-color: var(--color-border-strong);
+}
+
+.secondary:hover {
+  border-color: var(--color-forest);
+  color: var(--color-forest);
+}
+
+.ghost {
+  padding: 0.3rem 0;
+  border-radius: var(--radius-xs);
+  color: var(--color-ink);
+}
+
+.ghost .icon {
+  transition: transform var(--duration-fast) var(--ease-editorial);
+}
+
+.ghost:hover {
+  color: var(--color-forest);
+}
+
+.ghost:hover .icon {
+  transform: translateX(4px);
+}

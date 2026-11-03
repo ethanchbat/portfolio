@@ -1,53 +1,60 @@
-import { Component } from 'react'
-import 'tachyons'
-import './App.css'
-import Navbar from './Components/Navbar'
-import Home from './Components/Home'
-import About from './Components/About'
-import Projects from './Components/Projects'
-import Skills from './Components/Skills'
-import Contact from './Components/Contact'
+import { Suspense, lazy } from 'react'
+import { Routes, Route } from 'react-router-dom'
+import { Navbar } from './components/layout/Navbar'
+import { Footer } from './components/layout/Footer'
+import { PageTransition } from './components/layout/PageTransition'
+import { ErrorBoundary } from './components/layout/ErrorBoundary'
+import { ContentProvider } from './contexts/ContentContext'
 
-class App extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      page: 'Home'
-    }
-  }
+const Home = lazy(() => import('./pages/Home'))
+const Work = lazy(() => import('./pages/Work'))
+const WorkDetail = lazy(() => import('./pages/WorkDetail'))
+const About = lazy(() => import('./pages/About'))
+const Contact = lazy(() => import('./pages/Contact'))
+const NotFound = lazy(() => import('./pages/NotFound'))
+const AdminApp = lazy(() => import('./pages/admin/AdminApp'))
 
-  handlePageChange = (page) => {
-    this.setState({ page })
-  }
+function PublicSite() {
+  return (
+    <>
+      <a href="#main" className="skip-link">
+        Skip to content
+      </a>
+      <Navbar />
+      <main id="main">
+        <ErrorBoundary>
+          <Suspense fallback={null}>
+            <Routes>
+              <Route element={<PageTransition />}>
+                <Route path="/" element={<Home />} />
+                <Route path="/work" element={<Work />} />
+                <Route path="/work/:slug" element={<WorkDetail />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="*" element={<NotFound />} />
+              </Route>
+            </Routes>
+          </Suspense>
+        </ErrorBoundary>
+      </main>
+      <Footer />
+    </>
+  )
+}
 
-  renderPage = () => {
-    switch (this.state.page) {
-      case 'Home':
-        return <Home onPageChange={this.handlePageChange} />
-      case 'About':
-        return <About />
-      case 'Projects':
-        return <Projects />
-      case 'Skills':
-        return <Skills />
-      case 'Contact':
-        return <Contact />
-      default:
-        return <Home onPageChange={this.handlePageChange} />
-    }
-  }
-
-  render() {
-    return (
-      <div className="min-vh-100 bg-near-white">
-        <Navbar 
-          currentPage={this.state.page} 
-          onPageChange={this.handlePageChange}
-        />
-        {this.renderPage()}
-      </div>
-    )
-  }
+function App() {
+  return (
+    <ContentProvider>
+      <ErrorBoundary>
+        <Suspense fallback={null}>
+          <Routes>
+            <Route path="/admin/*" element={<AdminApp />} />
+            <Route path="/*" element={<PublicSite />} />
+          </Routes>
+        </Suspense>
+      </ErrorBoundary>
+    </ContentProvider>
+  )
 }
 
 export default App
